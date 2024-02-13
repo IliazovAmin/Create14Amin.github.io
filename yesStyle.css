@@ -12,14 +12,12 @@ body {
 #noButton {
     position: absolute;
     margin-left: 150px;
-    transition: 0.5s;
-    
+    background-color: #FFB6C1; /* Оставляем фон однотонным */
 }
 
 #yesButton {
     position: absolute;
     margin-right: 150px;
-   
 }
 
 .header_text {
@@ -28,8 +26,7 @@ body {
     font-weight: bold;
     color: black;
     text-align: center;
-   
-    padding-bottom: 30;
+    padding-bottom: 30px;
 }
 
 .second_text {
@@ -59,7 +56,6 @@ body {
     align-items: center;
     margin-top: 20px;
     margin-left: 20px;
-    
 }
 
 .btn {
