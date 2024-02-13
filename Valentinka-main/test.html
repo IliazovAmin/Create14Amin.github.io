@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runaway Button</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffcccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .runaway-button {
+        background-color: #ff3333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .runaway-button:hover {
+        position: absolute;
+        left: calc(100% * var(--x));
+        top: calc(100% * var(--y));
+    }
+</style>
+</head>
+<body>
+
+<button class="runaway-button" onmouseover="moveButton()">Наведите мышь и попробуйте меня нажать</button>
+
+<script>
+    function moveButton() {
+        let x = Math.random();
+        let y = Math.random();
+        document.querySelector('.runaway-button').style.setProperty('--x', x);
+        document.querySelector('.runaway-button').style.setProperty('--y', y);
+    }
+</script>
+
+</body>
+</html>
