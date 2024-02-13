@@ -50,8 +50,9 @@
     </div>
 
     <script>
-        function goBack() {
-            window.history.back("yes2.html");
+         function goBack() {
+            window.history.replaceState({}, "", "yes2.html");
+            window.location.href = "yes2.html";
         }
     </script>
 </body>
